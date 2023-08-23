@@ -10,26 +10,26 @@
         FontSize="30">
     <StackPanel>
         <WrapPanel Margin="5">
-            <TextBlock Width="300" Background="Beige">ID</TextBlock>
+            <TextBlock Width="300" Background="Black">ID</TextBlock>
             <TextBox x:Name="TextBoxId" Width="300"></TextBox>
         </WrapPanel>
-        <WrapPanel Margin="5" Background="LightCoral">
+        <WrapPanel Margin="5" Background="Black">
             <TextBlock Width="300">Name</TextBlock>
             <TextBox x:Name="TextBoxFirstName" Width="300"></TextBox>
         </WrapPanel>
-        <WrapPanel Margin="5" Background="LightBlue">
+        <WrapPanel Margin="5" Background="Black">
             <TextBlock Width="300">Phone Number</TextBlock>
             <TextBox Width="300" x:Name="TextBoxPhoneNumber"></TextBox>
         </WrapPanel>
-        <WrapPanel Margin="5" Background="LightCoral">
+        <WrapPanel Margin="5" Background="Black">
             <TextBlock Width="300">Email</TextBlock>
             <TextBox x:Name="TextBoxEmail" Width="300"></TextBox>
         </WrapPanel>
-        <WrapPanel Margin="5" Background="LightBlue">
+        <WrapPanel Margin="5" Background="Black">
             <TextBlock Width="300">Address</TextBlock>
             <TextBox x:Name="TextBoxAddress" Width="300"></TextBox>
         </WrapPanel>
-        <Button Width="300" Margin="5" Background="LightBlue" Click="Button_AddClick">Add</Button>
-        <Button Width="300" Margin="5" Background="LightCoral" Click="Button_UpdateClick">Update</Button>
+        <Button Width="300" Margin="5" Background="Black" Click="Button_AddClick">Add</Button>
+        <Button Width="300" Margin="5" Background="Black" Click="Button_UpdateClick">Update</Button>
     </StackPanel>
 </Window>
