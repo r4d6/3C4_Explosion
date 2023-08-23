@@ -11,15 +11,5 @@ namespace _3C4_Explosion
         {
             InitializeComponent();
         }
-
-        private void Button_AddClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_UpdateClick(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
