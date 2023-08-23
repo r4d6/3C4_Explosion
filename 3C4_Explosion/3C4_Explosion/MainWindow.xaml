@@ -9,7 +9,7 @@
         Height="450" Width="800"
         FontSize="30">
     <StackPanel>
-        <WrapPanel Margin="5">
+        <WrapPanel Margin="5" Background="LightGreen">
             <TextBlock Width="300">ID</TextBlock>
             <TextBox x:Name="TextBoxId" Width="300"></TextBox>
         </WrapPanel>
@@ -31,5 +31,6 @@
         </WrapPanel>
         <Button Width="300" Margin="5" Background="LightBlue" Click="Button_AddClick">Add</Button>
         <Button Width="300" Margin="5" Background="LightCoral" Click="Button_UpdateClick">Update</Button>
+        <Button Width="300" Margin="5" Background="LightGreen" Click="Button_CancelClick">Cancel</Button>
     </StackPanel>
 </Window>
