@@ -10,7 +10,7 @@
         FontSize="30">
     <StackPanel>
         <WrapPanel Margin="5">
-            <TextBlock Width="300">ID</TextBlock>
+            <TextBlock Width="300" Background="Beige">ID</TextBlock>
             <TextBox x:Name="TextBoxId" Width="300"></TextBox>
         </WrapPanel>
         <WrapPanel Margin="5" Background="LightCoral">
