@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3C4_Explosion", "3C4_Explosion\3C4_Explosion.csproj", "{58902626-901E-4FA8-B772-D0037CC68A94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3C4_Explosion", "3C4_Explosion\3C4_Explosion.csproj", "{58902626-901E-4FA8-B772-D0037CC68A94}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A23_Linq", "A23_Linq\A23_Linq.csproj", "{8D1D8B3F-EB09-43A1-95AD-BE99F5DA1EB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{58902626-901E-4FA8-B772-D0037CC68A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58902626-901E-4FA8-B772-D0037CC68A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58902626-901E-4FA8-B772-D0037CC68A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1D8B3F-EB09-43A1-95AD-BE99F5DA1EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1D8B3F-EB09-43A1-95AD-BE99F5DA1EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1D8B3F-EB09-43A1-95AD-BE99F5DA1EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1D8B3F-EB09-43A1-95AD-BE99F5DA1EB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
