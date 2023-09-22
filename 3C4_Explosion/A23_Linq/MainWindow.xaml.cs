@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 // Écrire une commande Linq (ex: dataList.Max() et faire Ctrl+. Enter sur le .Max pour importer
 using System.Windows;
+using static A23_Linq.App;
 
 namespace A23_Linq
 {
@@ -15,6 +17,7 @@ namespace A23_Linq
         public MainWindow()
         {
             InitializeComponent();
+
 
             Exercice01();
             Exercice02();
@@ -38,19 +41,24 @@ namespace A23_Linq
             Exercice20();
         }
 
-        private void Exercice01()
+        private static void Exercice01()
         {
             // TODO: Find the username of the first player in the players dictionary.
+            Player? player = App.Players.Values.FirstOrDefault();
+            string name = player.Username;
         }
 
         private void Exercice02()
         {
             // TODO: Find the name of the character with the highest Id in the characters dictionary.
+            string? name = App.Characters.Values.FirstOrDefault().Name;
         }
 
         private void Exercice03()
         {
             // TODO: Find the average of items in each inventory.
+            App.Inventories.Values.Count(x => x.ItemIds.Count > 0);
+            IEnumerable<Inventory> InventoryWith1plusItem = App.Inventories.Values.Where(x => x.ItemIds.Count > 0);
         }
 
         private void Exercice04()
@@ -61,16 +69,19 @@ namespace A23_Linq
         private void Exercice05()
         {
             //TODO: Order the players in ascending order of their usernames.
+            //App.Players.OrderBy();
         }
 
         private void Exercice06()
         {
             // TODO: Order the players in descending order of their usernames.
+            //App.Players.OrderByDescending();
         }
 
         private void Exercice07()
         {
             // TODO: Find the players who have the item with Id 101 in their inventory.
+            //IEnumerable<Player> players = App.Players.Values.Where(x => x.Inventory.Count > 0);
         }
 
         private void Exercice08()
