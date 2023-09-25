@@ -1,0 +1,38 @@
+﻿<Window x:Class="A23_TP1.ManageUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A23_TP1"
+        mc:Ignorable="d"
+        Title="Étudiants" 
+        Height="500" MinHeight="500" Width="600" MinWidth="600" MaxWidth="600"
+        Style="{StaticResource DefaultWindowStyle}">
+
+    <Grid Grid.Column="1" Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="User type :" />
+        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="ComboBoxUserTypes" Margin="5 0 0 0" />
+
+        <TextBlock Grid.Row="1" Text="Search :" />
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TextBoxSearch" VerticalContentAlignment="Center" />
+
+        <ListView Grid.Row="2" Grid.ColumnSpan="2" x:Name="ListViewUsers" Margin="0 10" Background="{StaticResource ColorBackgroundInput}" />
+
+        <WrapPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Button x:Name="ButtonAdd" Content="Add" />
+            <Button x:Name="ButtonDelete" Content="Delete" Style="{StaticResource EmptyRoundedButtonStyle}" />
+        </WrapPanel>
+
+    </Grid>
+</Window>

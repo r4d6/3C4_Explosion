@@ -1,0 +1,222 @@
+﻿<Window x:Class="A23_TP1.ManageLessonsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A23_TP1"
+        mc:Ignorable="d"
+        Title="Planificateur d'horaires" 
+        Height="800" Width="1024" MinHeight="800" MinWidth="1024"
+        ResizeMode="NoResize"
+        Style="{StaticResource DefaultWindowStyle}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="0" Margin="20">
+            <WrapPanel.Resources>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Margin" Value="0 0 20 0" />
+                    <Setter Property="MinWidth" Value="100" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+
+                    <Style.Resources>
+                        <Style BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}">
+                            <Setter Property="Foreground" Value="Black" />
+                            <Setter Property="Padding" Value="0" />
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </WrapPanel.Resources>
+
+            <TextBlock Text="Session : " />
+            <ComboBox x:Name="ComboBoxSemesters" />
+
+            <TextBlock Text="Local : " />
+            <ComboBox x:Name="ComboBoxRooms" />
+
+            <TextBlock Text="Cours : " />
+            <ComboBox x:Name="CourseComboBox" MinWidth="175" />
+
+            <Button x:Name="ButtonAddLesson" Content="Ajouter leçon" />
+            <Button x:Name="ButtonRemoveLesson" Content="Supprimer leçon" />
+        </WrapPanel>
+
+        <Border Grid.Row="1" 
+                Margin="20 0 20 20"
+                BorderBrush="{StaticResource ColorForegroundInput}"
+                BorderThickness="0 0 2 2">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.Resources>
+                    <Style TargetType="{x:Type ToggleButton}">
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="BorderThickness" Value="2 2 0 0" />
+                        <Setter Property="Foreground" Value="White" />
+
+                        <Style.Resources>
+                            <Style BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}" />
+                        </Style.Resources>
+                    </Style>
+                    <Style BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}" >
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="BorderBrush" Value="{StaticResource ColorForegroundInput}" />
+                        <Setter Property="BorderThickness" Value="0 2 0 0" />
+                    </Style>
+                    <Style x:Key="Potato" TargetType="{x:Type Border}">
+                        <Setter Property="BorderBrush" Value="{StaticResource ColorForegroundInput}" />
+                        <Setter Property="BorderThickness" Value="2 0 0 0" />
+                    </Style>
+                </Grid.Resources>
+
+                <Border Grid.Row="0" Grid.Column="0" 
+                        BorderThickness="0 0 0 0">
+                    <TextBlock Text="" />
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource Potato}">
+                    <TextBlock Text="Lundi" />
+                </Border>
+                <Border Grid.Row="0" Grid.Column="2" Style="{StaticResource Potato}">
+                    <TextBlock Text="Mardi" />
+                </Border>
+                <Border Grid.Row="0" Grid.Column="3" Style="{StaticResource Potato}">
+                    <TextBlock Text="Mercredi" />
+                </Border>
+                <Border Grid.Row="0" Grid.Column="4" Style="{StaticResource Potato}">
+                    <TextBlock Text="Jeudi" />
+                </Border>
+                <Border Grid.Row="0" Grid.Column="5" Style="{StaticResource Potato}">
+                    <TextBlock Text="Vendredi" />
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0">
+                    <TextBlock Text="08:00" />
+                </Border>
+                <ToggleButton Grid.Row="1" Grid.Column="1" x:Name="Monday0Button"/>
+                <ToggleButton Grid.Row="1" Grid.Column="2" x:Name="Tuesday0Button"/>
+                <ToggleButton Grid.Row="1" Grid.Column="3" x:Name="Wednesday0Button"/>
+                <ToggleButton Grid.Row="1" Grid.Column="4" x:Name="Thursday0Button"/>
+                <ToggleButton Grid.Row="1" Grid.Column="5" x:Name="Friday0Button"/>
+
+                <Border Grid.Row="2" Grid.Column="0">
+                    <TextBlock Text="08:55" />
+                </Border>
+                <ToggleButton Grid.Row="2" Grid.Column="1" x:Name="Monday1Button"/>
+                <ToggleButton Grid.Row="2" Grid.Column="2" x:Name="Tuesday1Button"/>
+                <ToggleButton Grid.Row="2" Grid.Column="3" x:Name="Wednesday1Button"/>
+                <ToggleButton Grid.Row="2" Grid.Column="4" x:Name="Thursday1Button"/>
+                <ToggleButton Grid.Row="2" Grid.Column="5" x:Name="Friday1Button"/>
+
+                <Border Grid.Row="3" Grid.Column="0">
+                    <TextBlock Text="09:50" />
+                </Border>
+                <ToggleButton Grid.Row="3" Grid.Column="1" x:Name="Monday2Button"/>
+                <ToggleButton Grid.Row="3" Grid.Column="2" x:Name="Tuesday2Button"/>
+                <ToggleButton Grid.Row="3" Grid.Column="3" x:Name="Wednesday2Button"/>
+                <ToggleButton Grid.Row="3" Grid.Column="4" x:Name="Thursday2Button"/>
+                <ToggleButton Grid.Row="3" Grid.Column="5" x:Name="Friday2Button"/>
+
+                <Border Grid.Row="4" Grid.Column="0">
+                    <TextBlock Text="10:45" />
+                </Border>
+                <ToggleButton Grid.Row="4" Grid.Column="1" x:Name="Monday3Button"/>
+                <ToggleButton Grid.Row="4" Grid.Column="2" x:Name="Tuesday3Button"/>
+                <ToggleButton Grid.Row="4" Grid.Column="3" x:Name="Wednesday3Button"/>
+                <ToggleButton Grid.Row="4" Grid.Column="4" x:Name="Thursday3Button"/>
+                <ToggleButton Grid.Row="4" Grid.Column="5" x:Name="Friday3Button"/>
+
+                <Border Grid.Row="5" Grid.Column="0">
+                    <TextBlock Text="11:40" />
+                </Border>
+                <ToggleButton Grid.Row="5" Grid.Column="1" x:Name="Monday4Button"/>
+                <ToggleButton Grid.Row="5" Grid.Column="2" x:Name="Tuesday4Button"/>
+                <!--<ToggleButton Grid.Row="5" Grid.Column="3" x:Name="Wednesday4Button" IsEnabled="false" />-->
+                <ToggleButton Grid.Row="5" Grid.Column="4" x:Name="Thursday4Button"/>
+                <ToggleButton Grid.Row="5" Grid.Column="5" x:Name="Friday4Button"/>
+
+                <Border Grid.Row="6" Grid.Column="0">
+                    <TextBlock Text="12:35" />
+                </Border>
+                <ToggleButton Grid.Row="6" Grid.Column="1" x:Name="Monday5Button"/>
+                <ToggleButton Grid.Row="6" Grid.Column="2" x:Name="Tuesday5Button"/>
+                <!--<ToggleButton Grid.Row="6" Grid.Column="3" x:Name="Wednesday5Button" IsEnabled="false" />-->
+                <ToggleButton Grid.Row="6" Grid.Column="4" x:Name="Thursday5Button"/>
+                <ToggleButton Grid.Row="6" Grid.Column="5" x:Name="Friday5Button"/>
+
+                <Border Grid.Row="7" Grid.Column="0">
+                    <TextBlock Text="13:30" />
+                </Border>
+                <ToggleButton Grid.Row="7" Grid.Column="1" x:Name="Monday6Button"/>
+                <ToggleButton Grid.Row="7" Grid.Column="2" x:Name="Tuesday6Button"/>
+                <!--<ToggleButton Grid.Row="7" Grid.Column="3" x:Name="Wednesday6Button" IsEnabled="false" />-->
+                <ToggleButton Grid.Row="7" Grid.Column="4" x:Name="Thursday6Button"/>
+                <ToggleButton Grid.Row="7" Grid.Column="5" x:Name="Friday6Button"/>
+
+                <Border Grid.Row="8" Grid.Column="0">
+                    <TextBlock Text="14:25" />
+                </Border>
+                <ToggleButton Grid.Row="8" Grid.Column="1" x:Name="Monday7Button"/>
+                <ToggleButton Grid.Row="8" Grid.Column="2" x:Name="Tuesday7Button"/>
+                <ToggleButton Grid.Row="8" Grid.Column="3" x:Name="Wednesday7Button"/>
+                <ToggleButton Grid.Row="8" Grid.Column="4" x:Name="Thursday7Button"/>
+                <ToggleButton Grid.Row="8" Grid.Column="5" x:Name="Friday7Button"/>
+
+                <Border Grid.Row="9" Grid.Column="0">
+                    <TextBlock Text="15:20" />
+                </Border>
+                <ToggleButton Grid.Row="9" Grid.Column="1" x:Name="Monday8Button"/>
+                <ToggleButton Grid.Row="9" Grid.Column="2" x:Name="Tuesday8Button"/>
+                <ToggleButton Grid.Row="9" Grid.Column="3" x:Name="Wednesday8Button"/>
+                <ToggleButton Grid.Row="9" Grid.Column="4" x:Name="Thursday8Button"/>
+                <ToggleButton Grid.Row="9" Grid.Column="5" x:Name="Friday8Button"/>
+
+                <Border Grid.Row="10" Grid.Column="0">
+                    <TextBlock Text="16:15" />
+                </Border>
+                <ToggleButton Grid.Row="10" Grid.Column="1" x:Name="Monday9Button"/>
+                <ToggleButton Grid.Row="10" Grid.Column="2" x:Name="Tuesday9Button"/>
+                <ToggleButton Grid.Row="10" Grid.Column="3" x:Name="Wednesday9Button"/>
+                <ToggleButton Grid.Row="10" Grid.Column="4" x:Name="Thursday9Button"/>
+                <ToggleButton Grid.Row="10" Grid.Column="5" x:Name="Friday9Button"/>
+
+                <Border Grid.Row="11" Grid.Column="0">
+                    <TextBlock Text="17:10" />
+                </Border>
+                <ToggleButton Grid.Row="11" Grid.Column="1" x:Name="Monday10Button"/>
+                <ToggleButton Grid.Row="11" Grid.Column="2" x:Name="Tuesday10Button"/>
+                <ToggleButton Grid.Row="11" Grid.Column="3" x:Name="Wednesday10Button"/>
+                <ToggleButton Grid.Row="11" Grid.Column="4" x:Name="Thursday10Button"/>
+                <ToggleButton Grid.Row="11" Grid.Column="5" x:Name="Friday10Button"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="A23_TP1.HomeAdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A23_TP1"
+        mc:Ignorable="d"
+        Title="Administration Omnivox" 
+        Height="325" Width="325" ResizeMode="NoResize"
+        Style="{StaticResource DefaultWindowStyle}">
+
+    <StackPanel Margin="20">
+        <Button x:Name="ButtonManageUsers" Content="Manage users" />
+        <Button x:Name="ButtonManageGroups" Content="(Manquant) Manage groups" />
+        <Button x:Name="ButtonManageLessons" Content="(Bonus) Manage lessons"  />
+        <Border BorderThickness="1" BorderBrush="White" Margin="10 10" />
+        <Button x:Name="ButtonLogout" Content="Quitter" 
+                Style="{StaticResource EmptyRoundedButtonStyle}"  />
+    </StackPanel>
+</Window>
